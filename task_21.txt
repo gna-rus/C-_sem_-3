@@ -1,0 +1,41 @@
+using System;
+class HelloWorld
+{
+    // Создаем метод ввода числа без return
+    static void Input(ref int x1, ref int y1, ref int z1, ref int x2, ref int y2, ref int z2)
+    {
+        
+    Console.WriteLine ("Введите координаты 1 точеки (X,Y,Z)");
+    x1 = int.Parse (Console.ReadLine() ?? "");
+    y1 = int.Parse (Console.ReadLine() ?? "");
+    z1 = int.Parse (Console.ReadLine() ?? "");
+    
+    Console.WriteLine ("Введите координаты 2 точеки (X,Y,Z)");
+    x2 = int.Parse (Console.ReadLine() ?? "");
+    y2 = int.Parse (Console.ReadLine() ?? "");
+    z2 = int.Parse (Console.ReadLine() ?? ""); 
+    }
+    
+    
+    
+  static void Main ()
+  {
+    /*Задача 21
+    Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.*/
+    
+    int x1 = 0, y1 = 0, z1 = 0, x2 = 0, y2 = 0, z2 = 0;
+    Input(ref x1, ref y1, ref z1, ref x2, ref y2, ref z2); // обращение к методы ввода числа
+    
+    double rez = Math.Pow((x1-x2), 2) + Math.Pow((y1-y2), 2) + Math.Pow((z1-z2), 2);
+    rez = Math.Pow(rez, 0.5);
+    Console.WriteLine(rez);
+   
+   /*
+   A (3,6,8); B (2,1,-7), -> 15.84
+
+    A (7,-5, 0); B (1,-1,9) -> 11.53
+   */
+   
+  }
+}
+
