@@ -1,0 +1,33 @@
+using System;
+class HelloWorld
+{
+  static void Main ()
+  {
+    /*Задача 19
+    Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.*/
+    
+    Console.WriteLine ("Введите число");
+    int x = int.Parse (Console.ReadLine() ?? "");
+    int nums = x;
+    int rez = 0;
+
+    // Создаем цикл, задача которого провести ревес числа
+    while(x > 0)
+    {
+        int digr = x % 10;
+        rez = rez*10 + digr;
+        x = x / 10;
+    }
+
+    // Сравнение реверсивного числа с введеным
+    if(nums == rez)
+    {
+        Console.WriteLine("Да!");
+    }
+    else 
+    {
+        Console.WriteLine("Нет!");
+    }
+  }
+}
+
