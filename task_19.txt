@@ -6,10 +6,11 @@ class HelloWorld
     /*Задача 19
     Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.*/
     
-    Console.WriteLine ("Введите число");
+    Console.WriteLine ("Введите пятизначное число");
     int x = int.Parse (Console.ReadLine() ?? "");
     int nums = x;
     int rez = 0;
+    Console.Write($"{x} -> ");
 
     // Создаем цикл, задача которого провести ревес числа
     while(x > 0)
@@ -20,14 +21,9 @@ class HelloWorld
     }
 
     // Сравнение реверсивного числа с введеным
-    if(nums == rez)
-    {
-        Console.WriteLine("Да!");
-    }
-    else 
-    {
-        Console.WriteLine("Нет!");
-    }
+    if(nums == rez) Console.WriteLine("Да!");
+    
+    else Console.WriteLine("Нет!");
   }
 }
 
