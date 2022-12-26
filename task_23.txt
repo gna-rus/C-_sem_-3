@@ -13,6 +13,7 @@ class HelloWorld {
     int count = 1;
     Console.Write($"{num} -> ");
     
+    //Выведение ряда кубов чисес от 1 до N-1
     while(count < num)
     {
         Console.Write($"{Math.Pow(count, 3)}, "); //пишет через запятую и ставит "," в самом конце
